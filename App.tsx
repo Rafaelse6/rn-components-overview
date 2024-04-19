@@ -12,7 +12,7 @@ export default function App() {
           Alert.alert("TOUCH", "Finished touching");
         }}
       >
-        <Text>Hello</Text>
+        <Text style={styles.texto}>Hello</Text>
       </View>
       <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
@@ -26,5 +26,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  texto: {
+    fontSize: 20,
+    fontWeight: "bold",
+    backgroundColor: "blue",
+    color: "white",
+    padding: 20,
   },
 });

@@ -3,7 +3,7 @@ import { Alert, StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor: "red" }]}>
       <View
         onTouchStart={(event) => {
           Alert.alert("TOUCH", "Started clicking");
@@ -12,7 +12,7 @@ export default function App() {
           Alert.alert("TOUCH", "Finished touching");
         }}
       >
-        <Text style={styles.texto}>Hello</Text>
+        <Text style={[styles.texto, styles.border]}>Hello</Text>
       </View>
       <Text selectable={false}>
         Open up App.tsx to start working on your app!
@@ -37,6 +37,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  border: {
+    borderColor: "red",
+    borderWidth: 3,
   },
   texto: {
     fontSize: 20,

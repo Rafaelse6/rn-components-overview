@@ -18,6 +18,15 @@ export default function App() {
         Open up App.tsx to start working on your app!
       </Text>
       <StatusBar style="auto" />
+
+      <Text>
+        <Text>Hello</Text>
+        <Text>World</Text>
+      </Text>
+      <View>
+        <Text>Hello</Text>
+        <Text>World</Text>
+      </View>
     </View>
   );
 }

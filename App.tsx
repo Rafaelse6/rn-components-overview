@@ -14,7 +14,15 @@ export default function App() {
       >
         <Text style={[styles.texto, styles.border]}>Hello</Text>
       </View>
-      <Text selectable={false}>
+      <Text
+        selectable={false}
+        onPress={() => {
+          console.log("pressed");
+        }}
+        onLongPress={() => {
+          console.log("Long press");
+        }}
+      >
         Open up App.tsx to start working on your app!
       </Text>
       <StatusBar style="auto" />

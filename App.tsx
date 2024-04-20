@@ -14,7 +14,9 @@ export default function App() {
       >
         <Text style={styles.texto}>Hello</Text>
       </View>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text selectable={false}>
+        Open up App.tsx to start working on your app!
+      </Text>
       <StatusBar style="auto" />
     </View>
   );

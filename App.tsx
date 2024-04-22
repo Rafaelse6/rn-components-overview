@@ -25,7 +25,10 @@ export default function App() {
     <ScrollView>
       <Switch value={ligado} onValueChange={handleSwitch}></Switch>
       <View style={[styles.container, { backgroundColor: "red" }]}>
-        <Image source={imgSuper} />
+        <Image
+          source={imgSuper}
+          style={{ display: ligado ? "flex" : "none" }}
+        />
         <TextInput
           style={styles.input}
           onChange={(text) => setUsuario(text.nativeEvent.text)}

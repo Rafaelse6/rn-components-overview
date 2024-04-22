@@ -8,8 +8,8 @@ export default function App() {
       <Image source={imgSuper} />
       <TextInput
         style={styles.input}
-        onChange={() => console.log("adicionando texto")}
-        keyboardType="phone-pad"
+        onChange={(event) => console.log(event.nativeEvent.text)}
+        keyboardType="default"
         placeholder="Digite seu número"
       />
       <View

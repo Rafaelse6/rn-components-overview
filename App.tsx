@@ -1,9 +1,11 @@
 import { StatusBar } from "expo-status-bar";
-import { Alert, StyleSheet, Text, View } from "react-native";
+import { Alert, Image, StyleSheet, Text, View } from "react-native";
+import imgSuper from "./assets/super.png";
 
 export default function App() {
   return (
     <View style={[styles.container, { backgroundColor: "red" }]}>
+      <Image source={imgSuper} />
       <View
         onTouchStart={(event) => {
           Alert.alert("TOUCH", "Started clicking");
@@ -26,7 +28,6 @@ export default function App() {
         Open up App.tsx to start working on your app!
       </Text>
       <StatusBar style="auto" />
-
       <Text>
         <Text>Hello</Text>
         <Text>World</Text>

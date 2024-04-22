@@ -1,17 +1,37 @@
 import { StatusBar } from "expo-status-bar";
-import { Alert, Image, StyleSheet, Text, View, TextInput } from "react-native";
+import {
+  Alert,
+  Image,
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  Button,
+} from "react-native";
+import React, { useState } from "react";
 import imgSuper from "./assets/super.png";
 
 export default function App() {
+  const [usuario, setUsuario] = useState("");
+
   return (
     <View style={[styles.container, { backgroundColor: "red" }]}>
       <Image source={imgSuper} />
       <TextInput
         style={styles.input}
-        onChange={(event) => console.log(event.nativeEvent.text)}
+        onChange={(text) => setUsuario(text.nativeEvent.text)}
         keyboardType="default"
         placeholder="Digite seu número"
+        value={usuario}
       />
+
+      <Button
+        title="click here"
+        onPress={() => {
+          Alert.alert("valor atual", usuario);
+        }}
+      />
+
       <View
         onTouchStart={(event) => {
           Alert.alert("TOUCH", "Started clicking");

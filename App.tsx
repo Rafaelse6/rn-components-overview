@@ -8,15 +8,22 @@ import {
   TextInput,
   Button,
   ScrollView,
+  Switch,
 } from "react-native";
 import React, { useState } from "react";
 import imgSuper from "./assets/super.png";
 
 export default function App() {
   const [usuario, setUsuario] = useState("");
+  const [ligado, setLigado] = useState(false);
+
+  function handleSwitch() {
+    setLigado(!ligado);
+  }
 
   return (
     <ScrollView>
+      <Switch value={ligado} onValueChange={handleSwitch}></Switch>
       <View style={[styles.container, { backgroundColor: "red" }]}>
         <Image source={imgSuper} />
         <TextInput
